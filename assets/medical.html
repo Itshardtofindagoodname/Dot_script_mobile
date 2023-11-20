@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="medical.css">
+</head>
+
+<body>
+  <div id="trigger">
+  <span class="trigger">Have any question regarding day to day medical queries? Or want to search up common and basic medicines and symptoms? We got you here. Just click on the icon on the bottom right corner.</span>
+  </div>
+  <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+  <script>
+    window.botpressWebChat.init({
+      "composerPlaceholder": "Go for anything you want to know",
+      "botConversationDescription": "For your daily medical queries.",
+      "botId": "d083e677-3b58-485d-abfd-4587d169fe71",
+      "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
+      "messagingUrl": "https://messaging.botpress.cloud",
+      "clientId": "d083e677-3b58-485d-abfd-4587d169fe71",
+      "webhookId": "3d840d02-a22b-4270-a38f-b4cc7bfba9f1",
+      "lazySocket": true,
+      "themeName": "prism",
+      "botName": "Regular Bot",
+      "avatarUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSF72-zSslCe3YjvOOIMh9iG5IUm0fvq9Ux2TMVH_DzqvtTrkzqBDh9t_bqfExqpHXSfs8&usqp=CAU",
+      "stylesheet": "https://webchat-styler-css.botpress.app/prod/1d07963b-48eb-4a86-a698-a8e315fc1b32/v20220/style.css",
+      "frontendVersion": "v1",
+      "useSessionStorage": true,
+      "enableConversationDeletion": true,
+      "showPoweredBy": false,
+      "theme": "prism",
+      "themeColor": "#2563eb"
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="data.css">
+</head>
+
+<body>
+  <div id="trigger">
+    <span class="trigger">Have any advanced question regarding medical syndromes Or want to search up genetic diseases? We got you here. Just click on the icon on the bottom right corner.</span>
+    </div>
+    <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+    <script>
+      window.botpressWebChat.init({
+          "composerPlaceholder": "Ask Question",
+          "botConversationDescription": "Ask any professional medical question",
+          "botId": "f15f91d1-d64f-416c-bbe8-0fc5279d49ad",
+          "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
+          "messagingUrl": "https://messaging.botpress.cloud",
+          "clientId": "f15f91d1-d64f-416c-bbe8-0fc5279d49ad",
+          "webhookId": "03ee639e-9247-4ae0-aa70-65ce9009221c",
+          "lazySocket": true,
+          "themeName": "prism",
+          "botName": "Medical Bot",
+          "avatarUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuAFpcd745jMpH9ux__7yqYzuXw7c_BvRqPw&usqp=CAU",
+          "stylesheet": "https://webchat-styler-css.botpress.app/prod/1d07963b-48eb-4a86-a698-a8e315fc1b32/v20220/style.css",
+          "frontendVersion": "v1",
+          "useSessionStorage": true,
+          "enableConversationDeletion": true,
+          "showPoweredBy": false,
+          "theme": "prism",
+          "themeColor": "#2563eb"
+      });
+    </script>
+</body>
+</html>
