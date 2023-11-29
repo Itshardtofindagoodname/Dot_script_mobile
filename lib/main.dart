@@ -35,52 +35,46 @@ class HomeScreen extends StatelessWidget {
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
-            opacity: 0.7,
-            image: AssetImage('assets/abstract.jpg'),
-            fit: BoxFit.fill,
-          ),
+              opacity: 0.7,
+              image: AssetImage('assets/abstract.jpg'),
+              fit: BoxFit.cover),
         ),
         child: Center(
-          child: Container(
-            height: 450,
-            width: 375,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(30),
-              color: Colors.black.withAlpha(100),
-            ),
-            padding: const EdgeInsets.all(20),
+          child: Padding(
+            padding: const EdgeInsets.all(30.0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Row(
-                  children: [
-                    const Icon(Icons.circle, color: Colors.red, size: 20),
-                    const Icon(Icons.circle, color: Colors.yellow, size: 20),
-                    const Icon(Icons.circle, color: Colors.green, size: 20),
-                    const SizedBox(width: 4),
-                    Text('C:\\Users\\DotScript>',
-                        style: TextStyle(color: Colors.grey.shade100)),
-                  ],
-                ),
                 const SizedBox(height: 16),
-                Text(
-                  'Welcome to DotScript',
-                  style: TextStyle(color: Colors.blue.shade200, fontSize: 30),
+                const Text(
+                  'DotScript',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 60,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
-                const SizedBox(height: 10),
+                const SizedBox(height: 20),
                 Text(
                   'Where all your medical questions are answered.',
-                  style: TextStyle(color: Colors.grey[100], fontSize: 18),
+                  style: TextStyle(color: Colors.grey[900], fontSize: 20),
                 ),
                 const SizedBox(height: 20),
                 Text(
                   'It is a medical information system designed to provide you reliable and easily accessible information about various diseases, drugs, and symptoms. It serves as a one-stop resource for individuals seeking accurate medical information, aiding in self-education and informed decision-making about their health.',
-                  style: TextStyle(color: Colors.grey[100], fontSize: 16),
+                  style: TextStyle(color: Colors.grey[50], fontSize: 18),
                 ),
                 const SizedBox(height: 10),
+                Text(
+                  'You can click on the given buttons to access your required bot.',
+                  style: TextStyle(
+                      color: Colors.grey[900],
+                      fontSize: 16,
+                      fontWeight: FontWeight.w500),
+                ),
                 const SizedBox(height: 20),
-                Row(
+                Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     TextButton(
@@ -88,12 +82,13 @@ class HomeScreen extends StatelessWidget {
                         _navigateToPage(context, const MedicalPage());
                       },
                       style: TextButton.styleFrom(
-                        backgroundColor: Colors.transparent,
+                        padding: const EdgeInsets.fromLTRB(20, 2, 20, 2),
+                        backgroundColor: Colors.grey.shade900,
                       ),
-                      child: Text(
+                      child: const Text(
                         'For Generic Queries',
                         style: TextStyle(
-                            color: Colors.tealAccent.shade400,
+                            color: Colors.white,
                             fontSize: 15,
                             fontWeight: FontWeight.bold),
                       ),
@@ -103,12 +98,13 @@ class HomeScreen extends StatelessWidget {
                         _navigateToPage(context, const DataPage());
                       },
                       style: TextButton.styleFrom(
-                        backgroundColor: Colors.transparent,
+                        padding: const EdgeInsets.fromLTRB(20, 2, 20, 2),
+                        backgroundColor: Colors.grey.shade900,
                       ),
-                      child: Text(
+                      child: const Text(
                         'For Genetic Queries',
                         style: TextStyle(
-                            color: Colors.blueGrey.shade300,
+                            color: Colors.white,
                             fontSize: 15,
                             fontWeight: FontWeight.bold),
                       ),
@@ -163,7 +159,7 @@ class MedicalPage extends StatelessWidget {
       body: WebViewPlus(
         javascriptMode: JavascriptMode.unrestricted,
         onWebViewCreated: (controller) {
-          controller.loadUrl('assets/medical.html');
+          controller.loadUrl('assets/generic.html');
         },
       ),
     );
@@ -183,7 +179,7 @@ class DataPage extends StatelessWidget {
       body: WebViewPlus(
         javascriptMode: JavascriptMode.unrestricted,
         onWebViewCreated: (controller) {
-          controller.loadUrl('assets/data.html');
+          controller.loadUrl('assets/genetic.html');
         },
       ),
     );
